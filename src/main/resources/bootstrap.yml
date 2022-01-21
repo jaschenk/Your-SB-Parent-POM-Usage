@@ -30,7 +30,7 @@ spring:
 
 logging:
   level:
-    io.bh.bhe.nve.dsp: TRACE
+    io.yourdomain: TRACE
 #
 #
 server:
