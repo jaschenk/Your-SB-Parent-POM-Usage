@@ -1,0 +1,40 @@
+spring:
+  main.allow-bean-definition-overriding: true
+  application.name: Your-SB-Parent-POM-Usage
+#
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+---
+spring:
+  profiles: local
+  cloud:
+    discovery:
+      enabled: false
+    consul:
+      enabled: false
+    config:
+      enabled: false
+      fail-fast: true
+      discovery:
+        enabled: false
+
+logging:
+  level:
+    io.bh.bhe.nve.dsp: TRACE
+#
+#
+server:
+  port: 8080
+#
+#
+---

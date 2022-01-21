@@ -1,0 +1,7 @@
+
+
+Your-SB-Parent-POM-Usage
+
+
+Spring Boot :: ${spring-boot.version} :: ${spring.application.name}
+
